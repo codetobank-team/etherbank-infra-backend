@@ -3,13 +3,10 @@ kind: Kustomization
 
 namespace: etherbank-api-dev
 
+  
 images:
 - name: seyio/etherbank-api
-  newTag: latest
-  
-replicas:
-- count: 1
-  name: etherbank-api-deployment
+  newTag: b1a4d014
 resources:
 - ../base
 
