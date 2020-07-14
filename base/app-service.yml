@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: etherbank-api-dev
+  name: etherbank-api-service
+spec:
+  ports: 
+    - port: 80
+      targetPort: 5000
+  selector:
+    app: etherbank-api
