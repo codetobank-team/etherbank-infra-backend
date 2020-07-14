@@ -3,6 +3,7 @@ kind: Kustomization
 
 resources:
 - app-deployment.yml
+- config-vars.yml
 - redis-deployment.yml
 - app-ingress.yaml
 - app-service.yml

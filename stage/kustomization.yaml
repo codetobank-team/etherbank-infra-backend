@@ -13,5 +13,5 @@ replicas:
 resources:
 - ../base
 
-patches:
+patchesStrategicMerge:
 - config-patch-stage.yml

@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: etherbank-config
+  namespace: etherbank-api-dev
+data:
+  serverport: '5000'
+  app_name: EtherBank
+  redishost: ether-cache-service
+  redisport: '6379'

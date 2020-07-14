@@ -10,13 +10,25 @@ spec:
         - name: api-server
           env:
             - name: PORT
-              value: 5000
+              valueFrom:
+                configMapKeyRef:
+                  name: etherbank-config
+                  key: serverport
             - name: APP_NAME
-              value: 'EtherBank'
+              valueFrom:
+                configMapKeyRef:
+                  name: etherbank-config
+                  key: app_name 
             - name: REDIS_PORT
-              value: 6379
+              valueFrom:
+                configMapKeyRef:
+                  name: etherbank-config
+                  key: redisport
             - name: REDIS_HOST
-              value: ether-cache-service
+              valueFrom:
+                configMapKeyRef:
+                  name: etherbank-config
+                  key: redishost
             - name: JWT_SECRET
               valueFrom:
                 secretKeyRef:
