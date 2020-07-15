@@ -7,4 +7,3 @@ resources:
 - redis-deployment.yml
 - app-ingress.yaml
 - app-service.yml
-- namespace.yml

@@ -12,3 +12,16 @@ replicas:
   name: etherbank-api-deployment
 resources:
 - ../base
+- namespace_prod.yml
+
+patchesStrategicMerge:
+- config-patch-prod.yml
+
+patchesJson6902:
+  - target:
+      group: networking.k8s.io
+      version: v1beta1
+      kind: Ingress
+      name: etherbank-api-ingress
+      namespace: etherbank-api-prod
+    path: ingress_patch_prod.yml

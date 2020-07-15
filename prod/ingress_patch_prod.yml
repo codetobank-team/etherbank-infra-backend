@@ -1,0 +1,23 @@
+- op: replace
+  path: /spec/rules/0/host
+  value: apioneblock.ddns.net
+
+- op: add
+  path: /metadata/annotations
+  value: 
+    certmanager.k8s.io/cluster-issuer: letsencrypt-prod
+    kubernetes.io/ingress.class: nginx
+- op: add
+  path: /spec
+  value: 
+    tls:
+      - hosts:
+        - apioneblock.ddns.net
+        secretName: tls-client-secret
+    rules:
+      - hosts: apioneblock.ddns.net
+        http:
+          paths:
+          - backend:
+              serviceName: etherbank-api-service
+              servicePort: 80

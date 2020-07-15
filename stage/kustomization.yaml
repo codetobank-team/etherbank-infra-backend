@@ -9,6 +9,7 @@ images:
   newTag: b1a4d014
 resources:
 - ../base
+- namespace.yml
 
 patchesStrategicMerge:
 - config-patch-stage.yml
