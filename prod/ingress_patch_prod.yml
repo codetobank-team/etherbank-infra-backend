@@ -13,7 +13,7 @@
     tls:
       - hosts:
         - apioneblock.ddns.net
-        secretName: tls-client-secret
+        secretName: tls-client-prod-secret
     rules:
       - hosts: apioneblock.ddns.net
         http:

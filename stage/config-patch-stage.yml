@@ -9,6 +9,8 @@ spec:
       containers:    
         - name: api-server
           env:
+            - name: NODE_ENV
+              value: stage
             - name: PORT
               valueFrom:
                 configMapKeyRef:
