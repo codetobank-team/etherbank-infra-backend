@@ -15,3 +15,12 @@ resources:
 
 patchesStrategicMerge:
 - config-patch-stage.yml
+
+patchesJson6902:
+  - target:
+      group: networking.k8s.io
+      version: v1beta1
+      kind: Ingress
+      name: etherbank-api-ingress
+      namespace: etherbank-api-dev
+    path: ingress_patch.yml
