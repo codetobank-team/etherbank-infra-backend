@@ -5,7 +5,7 @@ namespace: etherbank-api-prod
 
 images:
 - name: seyio/etherbank-api
-  newTag: latest
+  newTag: 78cf1fbe
   
 replicas:
 - count: 1
