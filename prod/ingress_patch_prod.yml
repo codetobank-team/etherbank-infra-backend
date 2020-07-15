@@ -15,7 +15,7 @@
         - apioneblock.ddns.net
         secretName: tls-client-prod-secret
     rules:
-      - hosts: apioneblock.ddns.net
+      - host: apioneblock.ddns.net
         http:
           paths:
           - backend:
