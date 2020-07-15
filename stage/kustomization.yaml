@@ -6,7 +6,7 @@ namespace: etherbank-api-dev
   
 images:
 - name: seyio/etherbank-api
-  newTag: b1a4d014
+  newTag: cb4db18c
 resources:
 - ../base
 - namespace.yml
@@ -15,10 +15,10 @@ patchesStrategicMerge:
 - config-patch-stage.yml
 
 patchesJson6902:
-  - target:
-      group: networking.k8s.io
-      version: v1beta1
-      kind: Ingress
-      name: etherbank-api-ingress
-      namespace: etherbank-api-dev
-    path: ingress_patch.yml
+- path: ingress_patch.yml
+  target:
+    group: networking.k8s.io
+    kind: Ingress
+    name: etherbank-api-ingress
+    namespace: etherbank-api-dev
+    version: v1beta1
