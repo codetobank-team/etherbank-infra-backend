@@ -8,3 +8,4 @@ data:
   app_name: EtherBank
   redishost: ether-cache-service
   redisport: '6379'
+  infura_api_url: 'https://ropsten.infura.io/v3/'

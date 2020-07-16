@@ -16,6 +16,11 @@ spec:
                 configMapKeyRef:
                   name: etherbank-config
                   key: serverport
+            - name: INFURA_API_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: etherbank-config
+                  key: infura_api_url
             - name: APP_NAME
               valueFrom:
                 configMapKeyRef:
@@ -46,3 +51,18 @@ spec:
                 secretKeyRef:
                   name: ether-stage-secrets
                   key:  atlas_password
+            - name: CONTRACT_PRIVATE_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: block-chain-secrets
+                  key:  contract_private_key
+            - name: CONTRACT_ADDRESS
+              valueFrom:
+                secretKeyRef:
+                  name: block-chain-secrets
+                  key:  contract_address
+            - name: INFURA_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: block-chain-secrets
+                  key:  infura_token
