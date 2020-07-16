@@ -3,13 +3,10 @@ kind: Kustomization
 
 namespace: etherbank-api-prod
 
+  
 images:
 - name: seyio/etherbank-api
-  newTag: 78cf1fbe
-  
-replicas:
-- count: 1
-  name: etherbank-api-deployment
+  newTag: deeaed6a
 resources:
 - ../base
 - namespace_prod.yml
@@ -18,10 +15,10 @@ patchesStrategicMerge:
 - config-patch-prod.yml
 
 patchesJson6902:
-  - target:
-      group: networking.k8s.io
-      version: v1beta1
-      kind: Ingress
-      name: etherbank-api-ingress
-      namespace: etherbank-api-prod
-    path: ingress_patch_prod.yml
+- path: ingress_patch_prod.yml
+  target:
+    group: networking.k8s.io
+    kind: Ingress
+    name: etherbank-api-ingress
+    namespace: etherbank-api-prod
+    version: v1beta1
