@@ -6,7 +6,7 @@ namespace: etherbank-api-dev
   
 images:
 - name: seyio/etherbank-api
-  newTag: 78cf1fbe
+  newTag: 5341f4bd
 resources:
 - ../base
 - namespace.yml
