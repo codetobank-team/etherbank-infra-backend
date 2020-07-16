@@ -21,6 +21,11 @@ spec:
                 configMapKeyRef:
                   name: etherbank-config
                   key: serverport
+            - name: NODE_TLS_REJECT_UNAUTHORIZED
+              valueFrom:
+                configMapKeyRef:
+                  name: etherbank-config
+                  key: ssl_validation_toggle
             - name: APP_NAME
               valueFrom:
                 configMapKeyRef:

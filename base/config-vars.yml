@@ -9,3 +9,4 @@ data:
   redishost: ether-cache-service
   redisport: '6379'
   infura_api_url: 'https://ropsten.infura.io/v3/'
+  ssl_validation_toggle: '0'
